@@ -10,6 +10,11 @@
     
 }
 
+section {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
 h1, h3 {
     font-weight: 600;   
 }
@@ -44,18 +49,54 @@ header {
 .card {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    padding: 15px;
-    width: 85vw;
+    padding: 10px;
+    width: 75vw;
     box-shadow: 15px 15px 50px -30px #000000;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    
     align-items: center;
+    flex: 0 0 auto;
+    width: 75vw; /* Ajuste a largura conforme necessário */
+    margin-right: 20px; /* Espaço entre cartões */
 }
 
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100vw;
+    padding: 10px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 75vw; /* Ajuste a largura conforme necessário */
+    margin-right: 20px; /* Espaço entre cartões */
+    /* Resto do seu estilo .card */
+}
+
+/* Estilo opcional para remover a barra de rolagem */
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Correção para garantir que o flexbox funcione corretamente em dispositivos móveis */
+@media (max-width: 600px) {
+    .card-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+
+
+
 .card img {
-    width: 95%;
+    width: 90%;
     margin-top: 3vh;
 }
 
@@ -84,7 +125,25 @@ p {
 
 }
 
+.fa-solid{
+    margin-right: 2vw;
+}
+
 .buyButton:hover{
     transform: scale(1.05);
     transition: 0.8s ease-in-out;
+}
+
+.youtube {
+    margin-top: 2vh;
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
+    color: white;
+    background-color: rgb(215, 18, 18);
+    font-family: 'Inter', 'sans-serif';
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    width: 50%;
 }
