@@ -15,8 +15,12 @@ section {
     margin-bottom: 2vh ;
 }
 
-h1, h3 {
+h1, h2, h3 {
     font-weight: 600;   
+}
+
+h2 {
+    margin-top: 5vh;
 }
 
 header h1 {
@@ -146,4 +150,27 @@ p {
     text-decoration: none;
     text-align: center;
     width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    header img {
+        width: 10vw;
+    }
+
+    .card {
+        width: 40%;
+    }
+    
+    body, section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-container {
+        flex-direction: row;
+    }
+
 }
