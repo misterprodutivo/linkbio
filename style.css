@@ -1,30 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Poppins:wght@200;400;500;600;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Russo+One&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    
 }
 
-section {
-    margin-top: 2vh;
-    margin-bottom: 2vh ;
-}
-
-h1, h2, h3 {
-    font-weight: 600;   
-}
-
-h2 {
-    margin-top: 5vh;
-}
-
-header h1 {
-    margin-bottom: 1vh;
+#logo {
+    box-shadow: 0px 4px 20px rgba(43, 192, 2, 0.3); /* Sombra colorida */
+    border: 2px solid rgba(10, 196, 0, 0.5); /* Borda colorida */
 }
 
 body {
@@ -33,7 +19,46 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+}
+
+i { 
+    margin-right: 10px;
+}
+
+section {
+    margin: 2vh 0;
+}
+
+.description, p {
+    width: 80vw;
+}
+
+.description {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 1vh;
+}
+
+h2 {
+    margin-top: 5vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
 }
 
 header img {
@@ -42,116 +67,82 @@ header img {
     border-radius: 50%;
 }
 
-header {
-    margin-bottom: 3vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    padding: 10px;
-    width: 75vw;
-    box-shadow: 15px 15px 50px -30px #000000;
-    margin-bottom: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    
-    align-items: center;
-    flex: 0 0 auto;
-    width: 75vw; /* Ajuste a largura conforme necessário */
-    margin-right: 20px; /* Espaço entre cartões */
-}
-
-
 .card-container {
     display: flex;
     overflow-x: auto;
     width: 90vw;
     padding: 10px;
+    gap: 20px;
 }
 
 .card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 15px 15px 50px -30px #000;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 0 0 auto;
-    width: 75vw; /* Ajuste a largura conforme necessário */
-    margin-right: 20px; /* Espaço entre cartões */
-    /* Resto do seu estilo .card */
+    width: 75vw;
 }
-
-/* Estilo opcional para remover a barra de rolagem */
-.card-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Correção para garantir que o flexbox funcione corretamente em dispositivos móveis */
-@media (max-width: 600px) {
-    .card-container {
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
-
-
-
 
 .card img {
     width: 90%;
     margin-top: 3vh;
 }
 
-.card h3 {
+.card h3, p {
     margin-top: 1vh;
 }
 
 p {
     font-size: 0.8rem;
-    width: 90%;
-    margin-top: 1vh;
     color: rgb(80, 80, 80);
 }
 
-.buyButton{
+.buyButton, .youtube {
     margin-top: 2vh;
     padding: 10px;
     border-radius: 35px;
     border: none;
     color: white;
-    font-family: 'Inter', 'sans-serif';
+    font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+}
+
+.buyButton {
     width: 50%;
-
 }
 
-.fa-solid{
-    margin-right: 2vw;
+.youtube {
+    width: 80%;
+    background-color: rgb(228, 0, 0);
+    box-shadow: 0px 4px 20px rgba(255, 0, 0, 0.3); /* Sombra vermelha */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Borda vermelha */
 }
 
-.buyButton:hover{
+.buyButton:hover {
     transform: scale(1.05);
     transition: 0.8s ease-in-out;
 }
 
-.youtube {
-    margin-top: 2vh;
-    padding: 10px;
-    border-radius: 35px;
-    border: none;
-    color: white;
-    background-color: rgb(215, 18, 18);
-    font-family: 'Inter', 'sans-serif';
-    font-size: 0.8rem;
-    text-decoration: none;
-    text-align: center;
-    width: 50%;
+/* Remove scrollbar */
+.card-container::-webkit-scrollbar {
+    display: none;
 }
 
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+    .card-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Estilos para telas maiores */
 @media screen and (min-width: 768px) {
     header img {
         width: 10vw;
@@ -160,17 +151,4 @@ p {
     .card {
         width: 40%;
     }
-    
-    body, section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-container {
-        flex-direction: row;
-    }
-
 }
